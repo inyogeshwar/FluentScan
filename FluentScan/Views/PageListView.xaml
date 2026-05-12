@@ -321,7 +321,7 @@
                 </GridView.ItemContainerTransitions>
 
                 <GridView.ItemTemplate>
-                    <DataTemplate x:DataType="scanner:ScanResultElement">
+                    <DataTemplate x:DataType="fs:ScanResultElement">
                         <GridViewItem x:Name="GridViewItemPage" Margin="4" Style="{ThemeResource DefaultGridViewItemStyle}" AutomationProperties.Name="{Binding ItemDescriptor}" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" AllowDrop="False">
                             <Grid>
                                 <!-- Selected Item Background -->

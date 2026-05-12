@@ -48,7 +48,7 @@ namespace FluentScan.Services
             catch (Exception exc)
             {
                 LogService?.Log.Warning(exc, "Displaying the rating dialog failed.");
-                try { await Launcher.LaunchUriAsync(new Uri(UriStoreRating)); } catch (Exception) { }
+                try { await Launcher.LaunchUriAsync(UriStoreRating); } catch (Exception) { }
             }
         }
 

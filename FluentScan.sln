@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentScan", "FluentScan.csproj", "{3ACD75A4-8064-460B-A686-7DA52CABD3F0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentScan", "FluentScan\FluentScan.csproj", "{3ACD75A4-8064-460B-A686-7DA52CABD3F0}"
 EndProject
-Project("{C7167F0D-BC9F-4E6E-AFE1-012C56B48DB5}") = "FluentScan.Package", "..\FluentScan.Package\FluentScan.Package.wapproj", "{1B39989E-060F-40D3-8371-F20F4CCA2BC9}"
+Project("{C7167F0D-BC9F-4E6E-AFE1-012C56B48DB5}") = "FluentScan.Package", "FluentScan.Package\FluentScan.Package.wapproj", "{1B39989E-060F-40D3-8371-F20F4CCA2BC9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageToPDF", "..\ImageToPDF\ImageToPDF.csproj", "{CCFEFACF-B58E-4600-B906-02BC7EB041E8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageToPDF", "ImageToPDF\ImageToPDF.csproj", "{CCFEFACF-B58E-4600-B906-02BC7EB041E8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentScan.Tests", "..\FluentScan.Tests\FluentScan.Tests.csproj", "{13C75332-B638-4D4B-96DA-7C29366FD657}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentScan.Tests", "FluentScan.Tests\FluentScan.Tests.csproj", "{13C75332-B638-4D4B-96DA-7C29366FD657}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

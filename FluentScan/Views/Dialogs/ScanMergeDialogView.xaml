@@ -118,7 +118,7 @@
                 </muxc:ItemsRepeater.Layout>
 
                 <muxc:ItemsRepeater.ItemTemplate>
-                    <DataTemplate x:DataType="scanner:ScanMergeElement">
+                    <DataTemplate x:DataType="fs:ScanMergeElement">
                         <customcontrols:ScanMergePreviewBlock ScanMergeElement="{x:Bind Mode=OneWay}" />
                     </DataTemplate>
                 </muxc:ItemsRepeater.ItemTemplate>
