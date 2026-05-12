@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="300" viewBox="0 0 620 300" role="img" aria-label="FluentScan splash screen concept">
+  <rect width="620" height="300" rx="0" fill="transparent"/>
+  <g transform="translate(92 74) scale(.34)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M126 70h148l58 58v250c0 13-10 23-23 23H126c-13 0-23-10-23-23V93c0-13 10-23 23-23z" fill="#F7F9FB" stroke="#383f45" stroke-width="18"/>
+    <path d="M274 72v61h58" stroke="#606971" stroke-width="16"/>
+    <path d="M152 164h106M152 286h138" stroke="#606971" stroke-width="18" opacity=".82"/>
+    <path d="M88 221h274" stroke="#0078D4" stroke-width="22"/>
+    <path d="M120 126v-24c0-9 7-16 16-16h24M330 324v24c0 9-7 16-16 16h-24" stroke="#0078D4" stroke-width="12" opacity=".9"/>
+  </g>
+  <text x="260" y="132" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="600" fill="#202428">FluentScan</text>
+  <text x="262" y="166" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#606971">Quiet document capture for Windows</text>
+  <path d="M262 190h146" stroke="#0078D4" stroke-width="4" stroke-linecap="round"/>
+</svg>

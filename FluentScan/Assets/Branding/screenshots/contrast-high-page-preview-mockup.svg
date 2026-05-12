@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-label="FluentScan page-preview screenshot mockup">
+  <rect width="1920" height="1080" fill="#000000"/>
+  <rect x="160" y="98" width="1600" height="884" rx="12" fill="#000000" stroke="#FFFFFF" stroke-width="2"/>
+  <rect x="160" y="98" width="1600" height="56" rx="12" fill="#000000"/>
+  <circle cx="196" cy="126" r="7" fill="#FFFFFF"/>
+  <circle cx="224" cy="126" r="7" fill="#FFFFFF"/>
+  <circle cx="252" cy="126" r="7" fill="#FFFFFF"/>
+  <rect x="192" y="198" width="272" height="728" rx="8" fill="#000000" stroke="#FFFFFF" stroke-opacity=".35"/>
+  <rect x="512" y="198" width="704" height="728" rx="8" fill="#000000" stroke="#FFFFFF" stroke-opacity=".35"/>
+  <rect x="1264" y="198" width="432" height="728" rx="8" fill="#000000" stroke="#FFFFFF" stroke-opacity=".35"/>
+  <text x="232" y="266" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="600" fill="#FFFFFF">FluentScan</text>
+  <path d="M232 326h172M232 386h132M232 446h190" stroke="#FFFFFF" stroke-width="18" stroke-linecap="round" opacity=".65"/>
+  <rect x="592" y="270" width="544" height="394" rx="10" fill="#000000" stroke="#FFFFFF" stroke-opacity=".5"/>
+  <path d="M690 462h348" stroke="#FFFFFF" stroke-width="18" stroke-linecap="round"/>
+  <path d="M1370 288h204M1370 358h246M1370 428h168" stroke="#FFFFFF" stroke-width="16" stroke-linecap="round" opacity=".7"/>
+  <rect x="1368" y="736" width="196" height="54" rx="6" fill="#FFFFFF"/>
+  <text x="1466" y="771" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="600" fill="#FFFFFF">Scan</text>
+  <text x="960" y="1018" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="26" fill="#FFFFFF">Page preview</text>
+</svg>

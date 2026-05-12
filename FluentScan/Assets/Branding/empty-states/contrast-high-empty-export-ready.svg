@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="260" viewBox="0 0 420 260" role="img" aria-label="Ready to export">
+  <rect width="420" height="260" fill="transparent"/>
+  <rect x="108" y="38" width="204" height="176" rx="18" fill="#000000" stroke="#FFFFFF" stroke-width="8"/>
+  <path d="M258 38v48h54" fill="none" stroke="#FFFFFF" stroke-width="8" stroke-linejoin="round"/>
+  <path d="M174 202l38 38 82-92" fill="none" stroke="#FFFFFF" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="210" y="246" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="600" fill="#FFFFFF">Ready to export</text>
+</svg>

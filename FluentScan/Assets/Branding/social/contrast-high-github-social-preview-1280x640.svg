@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" role="img" aria-label="FluentScan GitHub social preview banner">
+  <rect width="1280" height="640" fill="#000000"/>
+  <path d="M0 636H1280" stroke="#FFFFFF" stroke-width="8"/>
+  <text x="102" y="115" font-family="Segoe UI, Arial, sans-serif" font-size="102" font-weight="600" fill="#FFFFFF">FluentScan</text>
+  <text x="102" y="205" font-family="Segoe UI, Arial, sans-serif" font-size="35" fill="#FFFFFF">Modern scanning for Windows</text>
+  <g transform="translate(870 77) scale(1.23076923076923)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M126 70h148l58 58v250c0 13-10 23-23 23H126c-13 0-23-10-23-23V93c0-13 10-23 23-23z" fill="#000000" stroke="#FFFFFF" stroke-width="18"/>
+    <path d="M274 72v61h58" stroke="#FFFFFF" stroke-width="16"/>
+    <path d="M152 164h106M152 286h138" stroke="#FFFFFF" stroke-width="18" opacity=".82"/>
+    <path d="M88 221h274" stroke="#FFFFFF" stroke-width="22"/>
+    <path d="M120 126v-24c0-9 7-16 16-16h24M330 324v24c0 9-7 16-16 16h-24" stroke="#FFFFFF" stroke-width="12" opacity=".9"/>
+  </g>
+</svg>

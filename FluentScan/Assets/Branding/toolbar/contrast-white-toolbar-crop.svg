@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" role="img" aria-label="crop icon">
+  <g fill="none" stroke="#383f45" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+    <path d='M10 4v22h22'/><path d='M4 10h22v22'/>
+  </g>
+</svg>
