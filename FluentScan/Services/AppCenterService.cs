@@ -77,13 +77,19 @@ namespace FluentScan.Services
         {
             IsAppCenterAllowed = (bool)SettingsService.GetSetting(AppSetting.SettingErrorStatistics);
             await AppCenter.SetEnabledAsync(IsAppCenterAllowed);
-            Crashes.GetErrorAttachments = (report) => CreateErrorAttachmentAsync(report, true).Result;
-            AppCenter.Start(GetSecret("SecretAppCenter"), typeof(Analytics), typeof(Crashes));
 
-            // send initial analytics
-            TrackEvent(AppCenterEvent.ArchitectureDetected, new Dictionary<string, string> {
-                { "Architecture", SystemInformation.Instance.OperatingSystemArchitecture.ToString() },
-            });
+            // Only start AppCenter if a valid secret is configured
+            string appCenterSecret = GetSecret("SecretAppCenter");
+            if (!string.IsNullOrEmpty(appCenterSecret))
+            {
+                Crashes.GetErrorAttachments = (report) => CreateErrorAttachmentAsync(report, true).Result;
+                AppCenter.Start(appCenterSecret, typeof(Analytics), typeof(Crashes));
+
+                // send initial analytics
+                TrackEvent(AppCenterEvent.ArchitectureDetected, new Dictionary<string, string> {
+                    { "Architecture", SystemInformation.Instance.OperatingSystemArchitecture.ToString() },
+                });
+            }
         }
         
         /// <summary>

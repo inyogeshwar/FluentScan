@@ -160,8 +160,17 @@ static class Utilities
     /// <returns>The secret.</returns>
     public static string GetSecret(string secret)
     {
-        var resources = new ResourceLoader("Secrets");
-        return resources.GetString(secret);
+        try
+        {
+            var resources = new ResourceLoader("Secrets");
+            return resources.GetString(secret);
+        }
+        catch
+        {
+            // Secrets.resw removed - return empty string
+            // App Center will not be initialized if no valid secret
+            return string.Empty;
+        }
     }
 
     /// <summary>
