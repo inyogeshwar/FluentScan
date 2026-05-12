@@ -328,4 +328,8 @@ ASALocalRun/
 
 # MFractors (Xamarin productivity tool) working folder 
 .mfractor/
-Scanner/Resources/Secrets.resw
+build_output*.txt
+build.log
+build2.log
+BundleArtifacts/
+.claude/

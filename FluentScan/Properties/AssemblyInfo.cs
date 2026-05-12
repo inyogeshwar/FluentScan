@@ -6,12 +6,12 @@ using System.Runtime.CompilerServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Scanner")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("FluentScan")]
+[assembly: AssemblyDescription("A modern scanner app for Windows")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Scanner")]
-[assembly: AssemblyCopyright("Copyright © 2023 Simon Knuth")]
+[assembly: AssemblyCompany("Yogeshwar Kumar")]
+[assembly: AssemblyProduct("FluentScan")]
+[assembly: AssemblyCopyright("Copyright © 2026 Yogeshwar Kumar")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

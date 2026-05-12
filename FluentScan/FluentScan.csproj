@@ -355,7 +355,6 @@
     <Content Include="Assets\contrast-white\SplashScreen.scale-150.png" />
     <Content Include="Assets\contrast-white\SplashScreen.scale-200.png" />
     <Content Include="Assets\contrast-white\SplashScreen.scale-400.png" />
-    <Content Include="Assets\Simon.jpg" />
     <Content Include="License Texts\LicenseMicrosoftExtensionsDependencyInjection.txt" />
     <Content Include="License Texts\LicenseMicrosoftDataSqliteCore.txt" />
     <Content Include="License Texts\LicenseMicrosoftToolkitMvvm.txt" />
