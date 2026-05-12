@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Troubleshooting - FluentScan</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --primary: #0078D4; --text: #323130; --text-secondary: #605E5C; --background: #FFFFFF; --surface: #F3F2F1; --border: #EDEBE9; }
+        body { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif; color: var(--text); background: var(--background); line-height: 1.6; }
+        .container { max-width: 800px; margin: 0 auto; padding: 0 20px; }
+        header { background: var(--surface); border-bottom: 1px solid var(--border); padding: 16px 0; }
+        .header-content { display: flex; align-items: center; gap: 12px; }
+        .logo-icon { width: 40px; height: 40px; background: var(--primary); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; font-size: 18px; }
+        .logo-text { font-size: 20px; font-weight: 600; }
+        .logo a { text-decoration: none; color: var(--text); display: flex; align-items: center; gap: 12px; }
+        h1 { font-size: 32px; margin: 40px 0 20px; }
+        h2 { font-size: 24px; margin: 32px 0 16px; color: var(--text); }
+        h3 { font-size: 18px; margin: 24px 0 12px; color: var(--text); }
+        p, li { color: var(--text-secondary); margin-bottom: 16px; }
+        ul { margin-left: 24px; margin-bottom: 16px; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { padding: 12px; text-align: left; border: 1px solid var(--border); }
+        th { background: var(--surface); color: var(--text); font-weight: 600; }
+        .back-link { display: inline-block; margin-top: 40px; color: var(--primary); text-decoration: none; }
+        .back-link:hover { text-decoration: underline; }
+        .solution { background: #F6F9FF; padding: 16px; border-radius: 8px; margin: 16px 0; border-left: 4px solid var(--primary); }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">F</div>
+                    <span class="logo-text">FluentScan</span>
+                </a>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <h1>Troubleshooting</h1>
+
+        <h2>Common Issues</h2>
+
+        <h3>Scanner Not Found</h3>
+        <p><strong>Symptoms:</strong> "No scanner detected" message</p>
+        <div class="solution">
+            <strong>Solutions:</strong>
+            <ul>
+                <li>Ensure scanner is powered on</li>
+                <li>Check USB/network connection</li>
+                <li>Open Windows Settings > Devices > Scanners</li>
+                <li>Verify scanner appears in Windows list</li>
+                <li>Try disconnecting and reconnecting</li>
+                <li>Update scanner drivers from manufacturer</li>
+            </ul>
+        </div>
+
+        <h3>Scan Quality Issues</h3>
+        <p><strong>Blurry or unclear scans:</strong></p>
+        <ul>
+            <li>Increase resolution (300+ DPI)</li>
+            <li>Clean scanner glass</li>
+            <li>Ensure document is flat</li>
+            <li>Check for debris on glass</li>
+        </ul>
+        <p><strong>Incorrect colors:</strong></p>
+        <ul>
+            <li>Adjust color mode in scan options</li>
+            <li>Clean scanner sensors</li>
+            <li>Verify document is properly placed</li>
+        </ul>
+
+        <h3>PDF Won't Save</h3>
+        <p><strong>Error: "Cannot save file"</strong></p>
+        <ul>
+            <li>Check available storage space</li>
+            <li>Verify Documents folder exists</li>
+            <li>Try different save location</li>
+            <li>Run app as administrator</li>
+        </ul>
+
+        <h2>Windows Compatibility</h2>
+        <table>
+            <tr>
+                <th>Version</th>
+                <th>Supported</th>
+                <th>Notes</th>
+            </tr>
+            <tr>
+                <td>Windows 10 (1903+)</td>
+                <td>✓ Yes</td>
+                <td>Recommended</td>
+            </tr>
+            <tr>
+                <td>Windows 11</td>
+                <td>✓ Yes</td>
+                <td>Full feature support</td>
+            </tr>
+            <tr>
+                <td>Windows 10 (1809-)</td>
+                <td>✗ No</td>
+                <td>Update required</td>
+            </tr>
+        </table>
+
+        <h2>Reset App</h2>
+        <p>To reset all settings:</p>
+        <ol>
+            <li>Uninstall FluentScan</li>
+            <li>Delete folder: <code>%LOCALAPPDATA%\FluentScan</code></li>
+            <li>Reinstall from Store or MSIX</li>
+            <li>Reconfigure settings</li>
+        </ol>
+
+        <h2>Get Help</h2>
+        <p>If issues persist:</p>
+        <ul>
+            <li><a href="https://github.com/inyogeshwar/FluentScan/issues" style="color: var(--primary);">GitHub Issues</a></li>
+            <li>Email: yogeshwar853202@gmail.com</li>
+        </ul>
+        <p>Include:</p>
+        <ul>
+            <li>Windows version</li>
+            <li>Scanner model</li>
+            <li>Error message (if any)</li>
+            <li>Steps to reproduce</li>
+        </ul>
+
+        <a href="index.html" class="back-link">← Back to Home</a>
+    </div>
+</body>
+</html>

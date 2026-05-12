@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FluentScan - A modern scanner app for Windows 10 and Windows 11">
+    <title>FluentScan - Modern Scanner for Windows</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #0078D4;
+            --primary-dark: #106EBE;
+            --text: #323130;
+            --text-secondary: #605E5C;
+            --background: #FFFFFF;
+            --surface: #F3F2F1;
+            --border: #EDEBE9;
+        }
+
+        body {
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text);
+            background: var(--background);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: var(--surface);
+            border-bottom: 1px solid var(--border);
+            padding: 16px 0;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--text);
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--primary);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            font-size: 18px;
+        }
+
+        .logo-text {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        nav {
+            display: flex;
+            gap: 24px;
+        }
+
+        nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        /* Hero */
+        .hero {
+            text-align: center;
+            padding: 80px 0 60px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: var(--text);
+        }
+
+        .hero h1 span {
+            color: var(--primary);
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 32px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 16px;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* Features */
+        .features {
+            padding: 60px 0;
+            background: var(--surface);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .section-title h2 {
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+
+        .section-title p {
+            color: var(--text-secondary);
+            font-size: 18px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .feature-card {
+            background: var(--background);
+            padding: 24px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            background: #E6F2FB;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-bottom: 16px;
+        }
+
+        .feature-card h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .feature-card p {
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        /* Screenshots */
+        .screenshots {
+            padding: 60px 0;
+        }
+
+        .screenshot-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        .screenshot {
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+        }
+
+        .screenshot-placeholder {
+            background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+            aspect-ratio: 16/10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        .screenshot p {
+            padding: 12px;
+            font-size: 14px;
+            color: var(--text-secondary);
+            text-align: center;
+        }
+
+        /* Download */
+        .download {
+            padding: 60px 0;
+            background: var(--surface);
+            text-align: center;
+        }
+
+        .download-options {
+            display: flex;
+            gap: 24px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 32px;
+        }
+
+        .download-option {
+            background: var(--background);
+            padding: 24px 32px;
+            border-radius: 8px;
+            text-align: center;
+            min-width: 200px;
+        }
+
+        .download-option h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .download-option p {
+            color: var(--text-secondary);
+            font-size: 14px;
+            margin-bottom: 16px;
+        }
+
+        /* Footer */
+        footer {
+            padding: 40px 0;
+            background: var(--text);
+            color: white;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 24px;
+        }
+
+        .footer-links a {
+            color: #A19F9D;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .footer-info {
+            color: #A19F9D;
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            nav {
+                display: none;
+            }
+
+            .header-content {
+                justify-content: center;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="https://github.com/inyogeshwar/FluentScan" class="logo">
+                    <div class="logo-icon">F</div>
+                    <span class="logo-text">FluentScan</span>
+                </a>
+                <nav>
+                    <a href="#features">Features</a>
+                    <a href="#screenshots">Screenshots</a>
+                    <a href="#download">Download</a>
+                    <a href="https://github.com/inyogeshwar/FluentScan/releases">Releases</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Modern <span>Scanner</span> for Windows</h1>
+            <p>A feature-rich scanning application for Windows 10 and Windows 11. Scan documents to PDF, merge pages, and organize your scans with a clean, intuitive interface.</p>
+            <div class="cta-buttons">
+                <a href="#download" class="btn btn-primary">Download for Free</a>
+                <a href="https://github.com/inyogeshwar/FluentScan" class="btn btn-secondary">View on GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Features</h2>
+                <p>Everything you need to digitize your documents</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📷</div>
+                    <h3>Universal Scanner Support</h3>
+                    <p>Works with most Windows-compatible WIA scanners. Automatic scanner discovery makes it easy to get started.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📄</div>
+                    <h3>Multiple Formats</h3>
+                    <p>Save scans as PDF, JPEG, PNG, or TIFF. Create single or multi-page PDFs with the merge feature.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Modern Design</h3>
+                    <p>Windows 11 Fluent Design with Mica effect. Supports dark and light themes with adaptive layouts.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌍</div>
+                    <h3>Multi-language</h3>
+                    <p>Available in 25 languages. The app automatically uses your system language.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚙️</div>
+                    <h3>Customizable</h3>
+                    <p>Configure default scan settings, save locations, and file naming patterns to streamline your workflow.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Privacy Focused</h3>
+                    <p>All documents stay on your device. No cloud storage or document uploads. Your data never leaves your PC.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="screenshots" class="screenshots">
+        <div class="container">
+            <div class="section-title">
+                <h2>Screenshots</h2>
+                <p>See FluentScan in action</p>
+            </div>
+            <div class="screenshot-grid">
+                <div class="screenshot">
+                    <div class="screenshot-placeholder">Scanner Selection</div>
+                    <p>Easy scanner discovery and selection</p>
+                </div>
+                <div class="screenshot">
+                    <div class="screenshot-placeholder">Scan Options</div>
+                    <p>Configure resolution, color mode, and more</p>
+                </div>
+                <div class="screenshot">
+                    <div class="screenshot-placeholder">Preview & Edit</div>
+                    <p>Preview scans and manage pages</p>
+                </div>
+                <div class="screenshot">
+                    <div class="screenshot-placeholder">PDF Export</div>
+                    <p>Export to multiple formats</p>
+                </div>
+                <div class="screenshot">
+                    <div class="screenshot-placeholder">Settings</div>
+                    <p>Customize your scanning experience</p>
+                </div>
+                <div class="screenshot">
+                    <div class="screenshot-placeholder">Dark Theme</div>
+                    <p>Windows 11 dark mode support</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="download" class="download">
+        <div class="container">
+            <div class="section-title">
+                <h2>Download</h2>
+                <p>Get FluentScan for your Windows device</p>
+            </div>
+            <div class="download-options">
+                <div class="download-option">
+                    <h3>Microsoft Store</h3>
+                    <p>Best for most users</p>
+                    <a href="#" class="btn btn-primary">Open Store</a>
+                </div>
+                <div class="download-option">
+                    <h3>GitHub Releases</h3>
+                    <p>Latest MSIX package</p>
+                    <a href="https://github.com/inyogeshwar/FluentScan/releases" class="btn btn-secondary">View Releases</a>
+                </div>
+            </div>
+            <div style="margin-top: 24px; color: var(--text-secondary); font-size: 14px;">
+                <p><strong>Requirements:</strong> Windows 10 version 1903 or later, Windows 11</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="https://github.com/inyogeshwar/FluentScan">GitHub</a>
+                    <a href="https://github.com/inyogeshwar/FluentScan/issues">Issues</a>
+                    <a href="docs/privacy.html">Privacy</a>
+                    <a href="docs/troubleshooting.html">Help</a>
+                </div>
+                <div class="footer-info">
+                    © 2026 Yogeshwar Kumar. Licensed under MPL-2.0.
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
