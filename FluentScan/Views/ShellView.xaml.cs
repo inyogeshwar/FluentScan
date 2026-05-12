@@ -258,8 +258,6 @@ namespace FluentScan.Views
                     return NavigationViewItemMainEditor;
                 case ShellNavigationSelectableItem.Help:
                     return NavigationViewItemMainHelp;
-                case ShellNavigationSelectableItem.Donate:
-                    return NavigationViewItemMainDonate;
                 case ShellNavigationSelectableItem.Settings:
                     return (WinUI.NavigationViewItem)NavigationViewMain.SettingsItem;
                 default:
@@ -279,7 +277,6 @@ namespace FluentScan.Views
             else if (item == NavigationViewItemMainPageList) return ShellNavigationSelectableItem.PageList;
             else if (item == NavigationViewItemMainEditor) return ShellNavigationSelectableItem.Editor;
             else if (item == NavigationViewItemMainHelp) return ShellNavigationSelectableItem.Help;
-            else if (item == NavigationViewItemMainDonate) return ShellNavigationSelectableItem.Donate;
             else if (item == NavigationViewMain.SettingsItem) return ShellNavigationSelectableItem.Settings;
             else throw new ArgumentException(String.Format(
                 "Unable to convert NavigationViewItem {1} to ShellNavigationSelectableItem.",
@@ -291,16 +288,6 @@ namespace FluentScan.Views
             if (args.InvokedItemContainer == NavigationViewItemMainSaveLocation)
             {
                 await ViewModel.ShowScanSaveLocationCommand.ExecuteAsync(null);
-            }
-            else if (args.InvokedItemContainer == NavigationViewItemMainDonate)
-            {
-                DonateDialogView dialog = new DonateDialogView();
-                await RunOnUIThreadAsync(CoreDispatcherPriority.Normal, async () => await dialog.ShowAsync());
-            }
-            else if (args.InvokedItemContainer == NavigationViewItemMainOtherApps)
-            {
-                OtherAppsDialogView dialog = new OtherAppsDialogView();
-                await RunOnUIThreadAsync(CoreDispatcherPriority.Normal, async () => await dialog.ShowAsync());
             }
         }
 

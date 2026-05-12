@@ -268,16 +268,6 @@
                         <FontIcon Style="{StaticResource FontIconStyleSegoeFluentIcons}" Glyph="&#xE897;" FontSize="16"/>
                     </muxc:NavigationViewItem.Icon>
                 </muxc:NavigationViewItem>
-                <muxc:NavigationViewItem x:Name="NavigationViewItemMainDonate" x:Uid="ButtonDonate" SelectsOnInvoked="False" Opacity="{x:Bind ViewModel.WindowActivationState, Mode=OneWay, Converter={StaticResource WindowStateOpacityConverter}, FallbackValue=1.0}" AutomationProperties.Name="{x:Bind NavigationViewItemMainDonate, Converter={StaticResource ToolTipConverter}}">
-                    <muxc:NavigationViewItem.Icon>
-                        <FontIcon Style="{StaticResource FontIconStyleSegoeFluentIcons}" Glyph="&#xED56;" FontSize="16"/>
-                    </muxc:NavigationViewItem.Icon>
-                </muxc:NavigationViewItem>
-                <muxc:NavigationViewItem x:Name="NavigationViewItemMainOtherApps" x:Uid="ButtonOtherApps" SelectsOnInvoked="False" Opacity="{x:Bind ViewModel.WindowActivationState, Mode=OneWay, Converter={StaticResource WindowStateOpacityConverter}, FallbackValue=1.0}" AutomationProperties.Name="{x:Bind NavigationViewItemMainOtherApps, Converter={StaticResource ToolTipConverter}}">
-                    <muxc:NavigationViewItem.Icon>
-                        <FontIcon Style="{StaticResource FontIconStyleSegoeFluentIcons}" Glyph="&#xECAD;" FontSize="16"/>
-                    </muxc:NavigationViewItem.Icon>
-                </muxc:NavigationViewItem>
             </muxc:NavigationView.FooterMenuItems>
 
             <Grid x:Name="GridMainContent" Padding="0,0,6,6">
@@ -425,10 +415,6 @@
                         <TextBlock x:Uid="HyperlinkSettingsFeedbackGithub" TextWrapping="WrapWholeWords"/>
                     </StackPanel>
                 </HyperlinkButton>
-
-                <Button x:Name="ButtonDialogFeedbackDonate" IsEnabled="{Binding ElementName=ButtonLeftPaneSettings, Path=IsEnabled}" Margin="0,6,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Top" Style="{StaticResource AccentButtonStyle}" Command="{x:Bind ViewModel.ShowDonateDialogCommand}">
-                    <TextBlock x:Uid="DialogFeedbackButtonDonate"/>
-                </Button>
             </StackPanel>
         </muxc:TeachingTip>
 

@@ -70,10 +70,10 @@
             </Grid.ColumnDefinitions>
 
             <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Vertical">
-                <PersonPicture ProfilePicture="/Assets/Simon.jpg" Initials="SK" DisplayName="Simon Knuth" VerticalAlignment="Center" Width="80"/>
-                <HyperlinkButton HorizontalAlignment="Center" Margin="0,6,0,0" NavigateUri="{x:Bind helpers:AppConstants.UriSimon}">
-                    <TextBlock Text="Simon Knuth" Style="{StaticResource CaptionTextBlockStyle}"/>
-                </HyperlinkButton>
+                <Border Width="80" Height="80" CornerRadius="8" Background="{StaticResource SystemAccentColor}">
+                    <FontIcon Style="{StaticResource FontIconStyleSegoeFluentIcons}" Glyph="&#xE71B;" FontSize="32" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Border>
+                <TextBlock Text="FluentScan" HorizontalAlignment="Center" Margin="0,8,0,0" Style="{StaticResource CaptionTextBlockStyle}"/>
             </StackPanel>
         
             <Grid Grid.Row="0" Grid.Column="1" UseLayoutRounding="False">

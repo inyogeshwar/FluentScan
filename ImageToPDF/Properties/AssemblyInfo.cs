@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("ImageToPDF")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Yogeshwar Kumar")]
 [assembly: AssemblyProduct("ImageToPDF")]
-[assembly: AssemblyCopyright("Copyright © 2023 Simon Knuth")]
+[assembly: AssemblyCopyright("Copyright © 2026 Yogeshwar Kumar")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

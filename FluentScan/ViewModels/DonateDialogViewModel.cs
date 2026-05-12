@@ -47,12 +47,12 @@ namespace FluentScan.ViewModels
         }
 
         /// <summary>
-        ///     Opens the donation webpage specified by <see cref="UriDonation"/>.
+        ///     Opens the GitHub repository page.
         /// </summary>
         private async Task Donate()
         {
             AppCenterService?.TrackEvent(AppCenterEvent.DonationLinkClicked);
-            await Launcher.LaunchUriAsync(UriDonation);
+            await Launcher.LaunchUriAsync(UriGithub);
         }
     }
 }
