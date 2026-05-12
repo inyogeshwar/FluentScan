@@ -1,9 +1,9 @@
 ---
 name: Bug report
-about: Create a report to help improve the app
+about: Create a report to help improve FluentScan
 title: ''
 labels: bug
-assignees: simon-knuth
+assignees: inyogeshwar
 
 ---
 
@@ -24,4 +24,8 @@ assignees: simon-knuth
 <!-- If applicable, add screenshots to help explain your problem. -->
 
 **Log data**
-<!-- Please add the appropriate event log(s) to the issue. You can export event logs from the app's settings menu (section "Give feedback"). Just drag & drop the .txt file here. -->
+<!-- Please add the appropriate event log(s) to the issue. -->
+
+**Desktop (please complete the following information):**
+ - OS: Windows 11
+ - App version: 1.0.0

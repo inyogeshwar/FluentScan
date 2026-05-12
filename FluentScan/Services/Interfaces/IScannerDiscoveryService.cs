@@ -1,0 +1,24 @@
+﻿using FluentScan.Models;
+using System;
+using System.Collections.ObjectModel;
+using System.Threading.Tasks;
+
+namespace FluentScan.Services
+{
+    /// <summary>
+    ///     Searches for and lists discovered wired/wireless scanners.
+    /// </summary>
+    public interface IScannerDiscoveryService
+    {
+        event EventHandler InitialCrawlCompleted;
+
+        Task RestartSearchAsync();
+        void TryPauseSearchAsync();
+        void TryResumeSearchAsync();
+        Task AddDebugScannerAsync(DiscoveredScanner scanner);
+        ObservableCollection<DiscoveredScanner> DiscoveredScanners
+        {
+            get;
+        }
+    }
+}

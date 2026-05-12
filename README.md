@@ -1,107 +1,153 @@
+# FluentScan
+
 > [!NOTE]
 > The project is being rewritten from the ground up with lots of changes happening in quick succession. As a result, the current app is in maintenance mode and contributions will probably not reach the release channel. Stay tuned for the full release of v4!
 
-<image src='https://user-images.githubusercontent.com/50021001/143053339-ad627dd6-ee56-4329-9985-513dadf23935.jpg'/>
-<table>
-  <tr>
-    <td width="15%"><image src='https://user-images.githubusercontent.com/50021001/112044278-ea04f900-8b49-11eb-8399-8499f6391e57.png'/></td>
-    <td width="75%"><h1>Scanner</h1>
-                    <i>An all-in-one scanner app built for the Universal Windows Platform</i><br><br>
-    </td>
-  </tr>
-</table>
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/50021001/143053339-ad627dd6-ee56-4329-9985-513dadf23935.jpg"/>
+</div>
 
+<div align="center">
 
-&nbsp;
+[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-blue.svg)](https://opensource.org/licenses/MPL-2.0)
+[![Platform](https://img.shields.io/badge/Platform-Windows%2011-blue)](https://www.microsoft.com/windows/windows-11)
+[![.NET](https://img.shields.io/badge/.NET-8.0-purple)](https://dotnet.microsoft.com/)
+
+*A modern Windows 11 scanner application with Fluent Design*
+
+**Developer:** Yogeshwar Kumar
+
+</div>
+
 ## Features
-<ul>
-  <li>Support for all WIA-compatible scanners (that’s probably almost every regular consumer scanner in use today)</li>
-  <li>Save multiple pages in a single PDF file or as separate images</li>
-  <li>Immediately see the result after scanning</li>
-  <li>Scanned pages are automatically rotated</li>
-  <li>Built-in editor
-    <ul>
-      <li>Crop and rotate, even multiple pages at once</li>
-      <li>Draw and highlight with Windows Ink</li>
-      <li>Rename files and delete pages</li>
-      <li>Seamless editing of both PDFs and image files</li>
-      <li>Reorder PDF pages</li>
-    </ul>
-  </li>
-  <li>Share and copy your scans or continue editing in another app</li>
-  <li>A beautiful interface crafted for Windows 11</li>
-</ul>
 
+- Support for all WIA-compatible scanners (that's probably almost every regular consumer scanner in use today)
+- Save multiple pages in a single PDF file or as separate images
+- Immediately see the result after scanning
+- Scanned pages are automatically rotated
+- Built-in editor
+  - Crop and rotate, even multiple pages at once
+  - Draw and highlight with Windows Ink
+  - Rename files and delete pages
+  - Seamless editing of both PDFs and image files
+  - Reorder PDF pages
+- Share and copy your scans or continue editing in another app
+- A beautiful interface crafted for Windows 11
 
-&nbsp;
 ## Screenshots
-<table>
-  <tr>
-    <td width="50%"><image src='https://user-images.githubusercontent.com/50021001/143053709-1b46c8ee-ccd6-4495-9abc-c4869e7640b0.png'/></td>
-    <td width="50%"><image src='https://user-images.githubusercontent.com/50021001/143053825-4018b89f-0144-414e-9528-67397b7b5280.png'/></td>
-  </tr>
-  <tr>
-    <td width="50%"><image src='https://user-images.githubusercontent.com/50021001/143053874-84d84d70-8099-4e6c-ac41-7c05e6d516c7.png'/></td>
-    <td width="50%"></td>
-  </tr>
-</table>
 
+| | |
+|---|---|
+| ![Screenshot 1](https://user-images.githubusercontent.com/50021001/143053709-1b46c8ee-ccd6-4495-9abc-c4869e7640b0.png) | ![Screenshot 2](https://user-images.githubusercontent.com/50021001/143053825-4018b89f-0144-414e-9528-67397b7b5280.png) |
+| ![Screenshot 3](https://user-images.githubusercontent.com/50021001/143053874-84d84d70-8099-4e6c-ac41-7c05e6d516c7.png) | |
 
-&nbsp;
-## Download
-<table>
-  <tr>
-    <td width="70%"> <b>The stable version of the app is available in the Microsoft Store.</b><br>Additionally, all release packages are published in the <a href="https://github.com/simon-knuth/scanner/releases">Releases</a> section.<br>You can also view the source code of both stable and WIP versions on GitHub.</td>
-    <td width="30%">
-      <a href="https://apps.microsoft.com/store/detail/9N438MZHD3ZF"><img src="https://i.imgur.com/aAWYhvm.png"/></a>
-    </td>
-  </tr>
-</table>
+## Tech Stack
 
+- **Framework:** .NET 8 / UWP / WinUI 3
+- **Architecture:** MVVM with CommunityToolkit.Mvvm
+- **UI:** Windows Fluent Design with Mica/Acrylic
+- **Scanner:** Windows.Devices.Scanners (WIA)
+- **Logging:** Serilog
+- **Storage:** SQLite
 
-&nbsp;
-## Support the development
-If you like the app, you can directly [support the development with a donation](https://simon-knuth.github.io/scanner/donate.html). Thank you! ❤️
+## Getting Started
 
+### Prerequisites
 
-&nbsp;
+- Windows 10 version 1809 or later (Windows 11 recommended)
+- .NET 8 SDK
+- Visual Studio 2022 with UWP workload
+
+### Build
+
+```powershell
+# Clone the repository
+git clone https://github.com/inyogeshwar/FluentScan.git
+
+# Navigate to project
+cd FluentScan
+
+# Restore packages
+dotnet restore
+
+# Build solution
+dotnet build FluentScan.sln -c Debug
+
+# Or build for release
+dotnet build FluentScan.sln -c Release
+```
+
+### Running Tests
+
+```powershell
+dotnet test FluentScan.Tests\FluentScan.Tests.csproj
+```
+
+## Development
+
+### Project Structure
+
+```
+FluentScan/
+├── FluentScan/           # Main application
+│   ├── Views/            # XAML pages and dialogs
+│   ├── ViewModels/       # MVVM view models
+│   ├── Services/         # Business logic & services
+│   ├── Models/           # Data models
+│   ├── Controls/         # Custom XAML controls
+│   └── Resources/        # Localization files
+├── FluentScan.Package/    # MSIX packaging project
+├── FluentScan.Tests/     # Unit tests
+└── ImageToPDF/           # PDF conversion utility
+```
+
+### Architecture
+
+- **MVVM Pattern:** ViewModels use CommunityToolkit.Mvvm
+- **Dependency Injection:** Microsoft.Extensions.DependencyInjection
+- **Messaging:** WeakReferenceMessenger for inter-component communication
+- **All namespaces under FluentScan.***
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the **Mozilla Public License 2.0 (MPL-2.0)** - see the [LICENSE](LICENSE) file for details.
+
 ## Translations
+
 The currently supported languages are:
-<ul>
-  <li>Tunisian Arabic (AR-TN)</li>
-  <li>Catalan (CA)</li>
-  <li>Chinese Simplified (ZH-HANS, ZH-CN, ZH-HANS-CN, ZH-SG, ZH-HANS-SG)</li>
-  <li>Czech (CS)</li>
-  <li>Dutch (NL)</li>
-  <li>English (EN)</li>
-  <li>English (EN-GB)</li>
-  <li>French (FR)</li>
-  <li>German (DE)</li>
-  <li>Hebrew (HE)</li>
-  <li>Hindi (HI)</li>
-  <li>Hungarian (HU)</li>
-  <li>Indonesian (ID)</li>
-  <li>Italian (IT)</li>
-  <li>Norwegian (NB)</li>
-  <li>Polish (PL)</li>
-  <li>Portuguese (PT)</li>
-  <li>Portuguese (PT-BR)</li>
-  <li>Romanian (RO)</li>
-  <li>Russian (RU)</li>
-  <li>Slovak (SK)</li>
-  <li>Spanish (ES)</li>
-  <li>Ukrainian (UK)</li>
-</ul>  
+- Tunisian Arabic (AR-TN)
+- Catalan (CA)
+- Chinese Simplified (ZH-HANS)
+- Czech (CS)
+- Dutch (NL)
+- English (EN)
+- English (EN-GB)
+- French (FR)
+- German (DE)
+- Hebrew (HE)
+- Hindi (HI)
+- Hungarian (HU)
+- Indonesian (ID)
+- Italian (IT)
+- Norwegian (NB)
+- Polish (PL)
+- Portuguese (PT)
+- Portuguese (PT-BR)
+- Romanian (RO)
+- Russian (RU)
+- Slovak (SK)
+- Spanish (ES)
+- Ukrainian (UK)
 
-See [this page](https://simon-knuth.github.io/scanner/help-translate.html), if you'd like to help improve existing translations or add new ones.
-
-
-&nbsp;
 ## Credits
-Banner: <a href="https://unsplash.com/@microsoftedge">Microsoft Edge on Unsplash</a>
 
-
-&nbsp;
-## Privacy policy
-
-You can find the privacy policy [here](https://simon-knuth.github.io/scanner/privacy-policy.html).
+- **Developer:** Yogeshwar Kumar
+- Banner: [Microsoft Edge on Unsplash](https://unsplash.com/@microsoftedge)

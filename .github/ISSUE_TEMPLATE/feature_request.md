@@ -1,14 +1,14 @@
 ---
 name: Feature request
-about: Suggest an idea for this app
+about: Suggest an idea for FluentScan
 title: ''
 labels: enhancement
-assignees: simon-knuth
+assignees: inyogeshwar
 
 ---
 
 **Is your feature request related to a problem? Please describe.**
-<!-- A clear and concise description of what the problem is. Ex. I'm always frustrated when [...] -->
+<!-- A clear and concise description of what the problem is. -->
 
 **Describe the solution you'd like**
 <!-- A clear and concise description of what you want to happen. -->
